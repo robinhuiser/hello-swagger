@@ -86,7 +86,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	// Load a dummy object that servers as an interface
+	// Load a dummy object that serves as an interface
 	// that allows us to implement the API specification.
 	api := operations.NewHelloAPI(swaggerSpec)
 
