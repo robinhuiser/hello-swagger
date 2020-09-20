@@ -26,4 +26,7 @@ install:
 	glide up -v
 	go install -v
 
+clean:
+	rm -Rf vendor swagger/models swagger/restapi
+
 build: gen install

@@ -1,6 +1,6 @@
 # Go Hello Swagger
 
-Project demonstrating implementing a RESTful API microservice from a swagger spec in Go.
+Project demonstrating implementing a microservice exposing a RESTful API from a swagger spec in Go.
 
 ## Prerequisites
 
@@ -12,7 +12,9 @@ Project demonstrating implementing a RESTful API microservice from a swagger spe
 ## Run the project
 
 ~~~bash
-# Validates + generates swagger code, installs deps & binary into path
+# Validates swagger YAML
+# Generates swagger code
+# Installs deps & binary into path
 $ make build
 
 # In terminal #1, run server:
