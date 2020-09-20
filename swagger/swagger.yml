@@ -16,6 +16,14 @@ definitions:
       message:
         type: string
 
+  hostinfo:
+    type: object
+    required:
+      - hostname
+    properties:
+      hostname:
+        type: string
+
 paths:
   /hostname:
     get:
@@ -26,8 +34,7 @@ paths:
         200:
           description: returns the hostname of the machine
           schema:
-            description: the hostname of the machine
-            type: string
+            $ref: "#/definitions/hostinfo"
         default:
           description: error
           schema:

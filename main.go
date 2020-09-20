@@ -49,7 +49,7 @@ var (
 //	-	In case of success, the payload the indicates
 //		the success with the hostname.
 func getHostnameHandler(params operations.GetHostnameParams) middleware.Responder {
-	payload, err := os.Hostname()
+	hostname, err := os.Hostname()
 
 	if err != nil {
 		errPayload := &models.Error{
@@ -62,7 +62,11 @@ func getHostnameHandler(params operations.GetHostnameParams) middleware.Responde
 			WithPayload(errPayload)
 	}
 
-	return operations.NewGetHostnameOK().WithPayload("Olá from " + payload)
+	hostnamePayload := &models.Hostinfo{
+		Hostname: swag.String(hostname),
+	}
+
+	return operations.NewGetHostnameOK().WithPayload(hostnamePayload)
 }
 
 // main performs the main routine of the application:

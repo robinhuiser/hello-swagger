@@ -24,9 +24,14 @@ gen: validate
 
 install:
 	glide up -v
+
+run: gen
+	go run main.go
+
+build:
 	go install -v
 
 clean:
 	rm -Rf vendor swagger/models swagger/restapi
 
-all: clean gen install
+all: clean gen install build
