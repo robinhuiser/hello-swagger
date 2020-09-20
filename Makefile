@@ -29,4 +29,4 @@ install:
 clean:
 	rm -Rf vendor swagger/models swagger/restapi
 
-build: gen install
+all: clean gen install

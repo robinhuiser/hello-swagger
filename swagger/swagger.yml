@@ -1,6 +1,9 @@
+swagger: "2.0"
+
 info:
   title: Hello
   version: 0.0.1
+
 definitions:
   error:
     type: object
@@ -12,6 +15,7 @@ definitions:
         format: int64
       message:
         type: string
+
 paths:
   /hostname:
     get:
@@ -28,4 +32,3 @@ paths:
           description: error
           schema:
             $ref: "#/definitions/error"
-swagger: "2.0"

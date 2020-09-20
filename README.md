@@ -15,7 +15,7 @@ Project demonstrating implementing a microservice exposing a RESTful API from a 
 # Validates swagger YAML
 # Generates swagger code
 # Installs deps & binary into path
-$ make build
+$ make all
 
 # In terminal #1, run server:
 $ hello-swagger --port 8080
